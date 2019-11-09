@@ -1,0 +1,53 @@
+{
+  "name": "react-box",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf public && rm -rf dist",
+    "build": "tsc",
+    "install:peer": "npm install react react-dom styled-components",
+    "link:react": "npm link ../../node_modules/react && npm link ../../node_modules/react-dom",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
+  },
+  "author": "Nikhil Saraf <nsaraf98@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "color": "^3.1.2",
+    "framer-motion": "^1.6.15",
+    "react-svg": "^10.0.23",
+    "styled-system": "^5.1.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-transform-runtime": "7.4.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/node": "^12.12.6",
+    "@types/react": "^16.9.11",
+    "@types/styled-components": "^4.1.22",
+    "@types/styled-system": "^5.1.3",
+    "babel-plugin-styled-components": "^1.10.6",
+    "csstype": "^2.6.7",
+    "now": "^16.4.4",
+    "typescript": "^3.7.2",
+    "styled-components": "^5.0.0-rc.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "peerDependencies": {
+    "styled-components": "^5.0.0-rc.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
