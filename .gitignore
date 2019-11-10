@@ -9,6 +9,8 @@ lib-cov
 *.gz
 *.swp
 
+.npmrc
+
 pids
 logs
 results
