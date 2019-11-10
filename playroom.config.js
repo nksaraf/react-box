@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  components: './dist/index.js',
+  components: './src/index.ts',
   outputPath: './public',
 
   // Optional:

@@ -1,3 +1,3 @@
-import basic from '../src/theme';
+import basic from '../src/theme/theme';
 
 export { basic };
