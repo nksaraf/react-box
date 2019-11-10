@@ -1,6 +1,6 @@
 # @nksaraf/react-box
 
-A basic set of primitives led by the Box that integrate https://github.com/styled-system/styled-system (with https://github.com/styled-components/styled-components) and https://github.com/framer/framer-motion to give us a declarative interface for both styling and animation right through the props. Theming is through styled-systems and easy to access for styling and animations.
+A basic set of primitives led by the <code>Box</code> that integrate https://github.com/styled-system/styled-system (with https://github.com/styled-components/styled-components) and https://github.com/framer/framer-motion to give us a declarative interface for both styling and animation right through the props. Theming is through styled-systems and easy to access for styling and animations. We also re-export the <code>useFormik</code> hook from the great https://github.com/jaredpalmer/formik library to make form handling a breeze.
 
 The other primitives are:
 * Button, Input, Image, Text, Span, SVG, Link
