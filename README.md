@@ -21,3 +21,7 @@ Docs are on the way.
 ## Data fetching with useEffect
 <img src="https://github.com/nksaraf/playroom/raw/master/images/effect.gif" alt="Data fetching in Playroom Demo" title="Data fetching in Playroom Demo" />
 [playroom link - Data fetching](https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABAbQA4QGsYBbFAGk1RnQAVCSUBdTAXkwCUYBDMdAOgCuVAMrou6GAAoAOiHQAnGDDAEIsgJQBuackhos2AJbEuAcxgUqteqWQBJE+eZtOPfkJijxU2Ru3JXXkEqAFEAMzDldElJdVYAPkxgHUxMPQxMRVQBABssNkj0MAALSQADYvR0XFR4AHo6-CIuXEM+SDqWwzqANwAmRpsUOoASYCaGZABfMvUU1Mw+dGKYZEkocS4EzA2xPgArVBRYueQFxeXV9c3tqzoiWwczKV2uPlRceUMJVD4w+RQ6AA+rAwlxcuh1Kdzu1xCVJDB5AD5LdqPdJk9zDIQBotDophQ8ENkIw8cgdAAeOzIXACdDzHpcHICGAscbEqbzFAAYWKXGQ5jZjOZMFR1gex2FLPaAiRq3QABUuPJzPwpTB1JzkHV4pTMaLUPIwGzjM8ppgdToQFMgA)
+
+## Forms with Formik
+<img src="https://github.com/nksaraf/playroom/raw/master/images/forms.gif" alt="Forms in Formik Demo" title="Forms in Formik Demo" />
+[playroom link - Forms using Formik]https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABMTA3AhgDYCuMqANJgBb7JSEwDCNyA5jJgL6YC8mxqGADEIAJwC2ASwDWACmAAdZJkyTkk9JKIA1IqVTxsSlSuT5xMQwpABldDAAOVGMmvGu5dyhvEARlPRDWQBKXgA+bE4lTmCAbiUlAB4w90SASWQHYiwCEhgeYFz9ADozC24UZlp2ApZ6JhZ2bjL86xbrTAB6FOVMRIAhCAAPTDBiUVQxHmsHCDV7UQ7IQinrXzzigFYABm3rHpNMAAkYQhXsIrJS8xhOAEJUzsGhnsTupRBOIA
