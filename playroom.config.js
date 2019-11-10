@@ -1,14 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  components: './src/index.tsx',
+  components: './dist/index.js',
   outputPath: './public',
 
   // Optional:
   title: 'Qwerty',
-  themes: './src/theme.ts',
+  themes: './playroom/theme.ts',
   frameComponent: './playroom/Frame.tsx',
-  widths: [1024, 768, 320],
+  widths: [320, 540, 768],
   port: 9000,
   openBrowser: true,
   exampleCode: `
@@ -16,11 +16,6 @@ module.exports = {
       Hello World!
     </Box>
   `,
-  typeDeclarations: [],
-  typeScriptFiles: [
-    '**/*.{ts,tsx}',
-    '!**/node_modules'
-  ],
   webpackConfig: () => ({
     module: {
       rules: [
@@ -47,15 +42,14 @@ module.exports = {
       ]
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      // alias: {
-      //   '@primitives' : path.resolve(__dirname, 'src/primitives'),
-      //   '@hooks' : path.resolve(__dirname, 'src/hooks'),
-      //   '@components' : path.resolve(__dirname, 'src/components'),
-      //   '@pages' : path.resolve(__dirname, 'src/pages'),
-      //   '@state' : path.resolve(__dirname, 'src/state'),
-      //   '@icons' : path.resolve(__dirname, 'src/streamline')
-      // }
+      extensions: ['.js', '.ts', '.tsx'],
     }
   }),
+  typeScriptFiles: [
+    '**/*.{ts,tsx}',
+    '!**/node_modules'
+  ],
+  typeDeclarations: [
+    'dist/**/*.d.ts'
+  ]
 };

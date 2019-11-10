@@ -21,5 +21,5 @@
     "outDir": "dist"
   },
   "exclude": ["node_modules"],
-  "include": ["src/index.tsx"]
+  "include": ["src/index.tsx", "src/theme.ts"]
 }
