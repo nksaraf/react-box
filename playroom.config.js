@@ -53,6 +53,6 @@ module.exports = {
     '!**/node_modules'
   ],
   typeDeclarations: [
-    'dist/**/*.d.ts'
+    'playroom/@types/**/*.d.ts'
   ]
 };
