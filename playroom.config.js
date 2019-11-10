@@ -5,16 +5,19 @@ module.exports = {
   outputPath: './public',
 
   // Optional:
-  title: 'Qwerty',
+  title: 'React Box',
   themes: './playroom/theme.ts',
   frameComponent: './playroom/Frame.tsx',
   widths: [320, 540, 768],
   port: 9000,
   openBrowser: true,
   exampleCode: `
-    <Box>
-      Hello World!
-    </Box>
+    const [counter, setCounter] = React.useState(0);
+    const incrementCounter = () => setCounter(counter => counter + 1);
+    
+    <Box cursor="pointer" onTap={incrementCounter}>
+      Hello World! You are at step {counter}. Tap/Click to move ahead.
+    </Box>  
   `,
   webpackConfig: () => ({
     module: {
