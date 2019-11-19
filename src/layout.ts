@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Box } from './Box';
+import styled from "styled-components";
+import { Box } from "./Box";
 
 export const Flex = styled(Box)`
   display: flex;
@@ -15,12 +15,9 @@ export const Grid = styled(Box)`
 `;
 Grid.defaultProps = {
   columns: 12,
-  flow: 'row',
+  flow: "row",
   gridGap: 2,
-  minRowHeight: '20px'
+  minRowHeight: "20px"
 };
 
 export const Cell = styled(Box)``;
-
-
-

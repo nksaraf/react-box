@@ -1,7 +1,7 @@
-import React from 'react';
-import { ThemeProvider, ThemeContext } from 'styled-components';
-import Color from 'color';
-import { get } from 'styled-system';
+import React from "react";
+import { ThemeContext } from "styled-components";
+import Color from "color";
+import { get } from "styled-system";
 
 export const useTheme = () => {
   const base = React.useContext(ThemeContext);
@@ -12,7 +12,3 @@ export const useTheme = () => {
 
   return theme;
 };
-
-export { ThemeProvider } from 'styled-components';
-export { useFormik } from 'formik';
-

@@ -1,10 +1,12 @@
-import colors from './color';
-import Color from 'color';
+import colors from "./color";
+import Color from "color";
 
 const hue = colors.blueGrey;
 
 function fontStack(fonts: string[]) {
-  return fonts.map(font => (font.includes(' ') ? `"${font}"` : font)).join(', ');
+  return fonts
+    .map(font => (font.includes(" ") ? `"${font}"` : font))
+    .join(", ");
 }
 
 const themeColors = {
@@ -34,15 +36,15 @@ const themeColors = {
 
 const other = {
   shadows: {
-    none: 'rgba(0,0,0,0) 0 0px 0px 0',
-    small: 'rgba(0,0,0,0.15) 0 3px 6px 0',
-    large: 'rgba(0,0,0,0.30) 0 4px 10px 0'
+    none: "rgba(0,0,0,0) 0 0px 0px 0",
+    small: "rgba(0,0,0,0.15) 0 3px 6px 0",
+    large: "rgba(0,0,0,0.30) 0 4px 10px 0"
   },
   ruleHeight: 32
 };
 
 export const theme = {
-  breakpoints: ['544px', '768px', '1012px', '1280px'],
+  breakpoints: ["544px", "768px", "1012px", "1280px"],
   colors: { ...colors, ...themeColors },
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 48],
   lineHeights: {
@@ -51,31 +53,31 @@ export const theme = {
     default: 1.5
   },
   maxWidths: {
-    small: '544px',
-    medium: '768px',
-    large: '1012px',
-    xlarge: '1280px'
+    small: "544px",
+    medium: "768px",
+    large: "1012px",
+    xlarge: "1280px"
   },
   fonts: {
     normal: fontStack([
-      'Barlow',
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'Segoe UI',
-      'Helvetica',
-      'Arial',
-      'sans-serif',
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol'
+      "Barlow",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Helvetica",
+      "Arial",
+      "sans-serif",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol"
     ]),
     mono: fontStack([
-      'SFMono-Regular',
-      'Consolas',
-      'Liberation Mono',
-      'Menlo',
-      'Courier',
-      'monospace'
+      "SFMono-Regular",
+      "Consolas",
+      "Liberation Mono",
+      "Menlo",
+      "Courier",
+      "monospace"
     ])
   },
   fontWeights: {
@@ -84,7 +86,7 @@ export const theme = {
     bold: 500,
     bolder: 600
   },
-  borders: [0, '1px solid'],
+  borders: [0, "1px solid"],
   radii: [0, 3, 6, 12, 150],
   space: [0, 4, 8, 16, 24, 32, 40, 48, 64, 80, 96, 112, 128],
   sizes: [0, 4, 8, 16, 24, 32, 40, 48, 64, 80, 96, 112, 128],
@@ -92,5 +94,3 @@ export const theme = {
 };
 
 export default theme;
-
-
