@@ -1,13 +1,13 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  components: './src/index.ts',
-  outputPath: './public',
+  components: "./playroom/lib.ts",
+  outputPath: "./public",
 
   // Optional:
-  title: 'React Box',
-  themes: './playroom/theme.ts',
-  frameComponent: './playroom/Frame.tsx',
+  title: "React Box",
+  themes: "./playroom/theme.ts",
+  frameComponent: "./playroom/Frame.tsx",
   widths: [320, 540, 768],
   port: 9000,
   openBrowser: true,
@@ -26,18 +26,18 @@ module.exports = {
           test: /\.tsx?$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: [
-                '@babel/preset-env',
-                '@babel/preset-typescript',
-                '@babel/preset-react'
+                "@babel/preset-env",
+                "@babel/preset-typescript",
+                "@babel/preset-react"
               ],
               plugins: [
-                '@babel/plugin-proposal-nullish-coalescing-operator',
-                '@babel/plugin-proposal-optional-chaining',
-                '@babel/plugin-transform-runtime',  
-                '@babel/plugin-proposal-class-properties'
+                "@babel/plugin-proposal-nullish-coalescing-operator",
+                "@babel/plugin-proposal-optional-chaining",
+                "@babel/plugin-transform-runtime",
+                "@babel/plugin-proposal-class-properties"
               ]
             }
           }
@@ -45,14 +45,9 @@ module.exports = {
       ]
     },
     resolve: {
-      extensions: ['.js', '.ts', '.tsx'],
+      extensions: [".js", ".ts", ".tsx"]
     }
   }),
-  typeScriptFiles: [
-    '**/*.{ts,tsx}',
-    '!**/node_modules'
-  ],
-  typeDeclarations: [
-    'playroom/@types/**/*.d.ts'
-  ]
+  typeScriptFiles: ["**/*.{ts,tsx}", "!**/node_modules"],
+  typeDeclarations: ["playroom/@types/**/*.d.ts"]
 };

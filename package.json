@@ -1,6 +1,6 @@
 {
   "name": "@nksaraf/react-box",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -21,11 +21,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "formik": "*",
-    "framer-motion": "*",
-    "react-svg": "*",
-    "styled-system": "*",
-    "color": "*"
+    "@nksaraf/playroom": "0.1.0-beta.1",
+    "color": "latest",
+    "formik": "latest",
+    "framer-motion": "latest",
+    "react-svg": "latest",
+    "restful-react": "latest",
+    "styled-system": "latest"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -41,20 +43,20 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
-    "@types/node": "^12.12.7",
+    "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.4.0",
-    "@types/styled-system": "^5.1.3",
+    "@types/styled-system": "^5.1.4",
     "babel-plugin-styled-components": "^1.10.6",
     "csstype": "^2.6.7",
-    "now": "*",
-    "react": "*",
-    "react-dom": "*",
-    "styled-components": "*",
-    "typescript": "*"
+    "now": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "styled-components": "latest",
+    "typescript": "latest"
   },
   "peerDependencies": {
-    "styled-components": "^4.0.0",
+    "styled-components": "^4.4.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "@nksaraf/playroom": "git+https://github.com/nksaraf/playroom.git#master"
