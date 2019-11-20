@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@nksaraf/playroom": "0.1.0-beta.1",
+    "@nksaraf/playroom": "github:nksaraf/playroom#master",
     "color": "latest",
     "formik": "latest",
     "framer-motion": "latest",
@@ -59,6 +59,6 @@
     "styled-components": "^4.4.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "@nksaraf/playroom": "git+https://github.com/nksaraf/playroom.git#master"
+    "@nksaraf/playroom": "github:nksaraf/playroom#master"
   }
 }
