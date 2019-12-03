@@ -21,13 +21,19 @@ import {
   space,
   SpaceProps,
   typography,
-  TypographyProps
+  TypographyProps,
 } from 'styled-system';
 import React from 'react';
 import { withThemedMotion } from '../withThemedMotion';
 import { TransformProps, transform } from './cssprops';
 import { textVariant } from './textVariants';
-import { CellProps, CustomGridProps, GridPosition, cellStyle, gridStyle } from './cssgrid';
+import {
+  CellProps,
+  CustomGridProps,
+  GridPosition,
+  cellStyle,
+  gridStyle,
+} from './cssgrid';
 import styled from 'styled-components';
 
 export interface BoxProps
@@ -53,14 +59,28 @@ export interface BoxProps
   skipTheme?: boolean;
 }
 
-export const Box = styled(withThemedMotion(motion.div)).attrs<BoxProps>((props: BoxProps) => ({
-  height: props.fullHeight ? '100%' : props.height,
-  width: props.fullWidth ? '100%' : props.width,
-  colIndex: props.gridPosition !== undefined ? props.gridPosition.column : props.colIndex,
-  rowIndex: props.gridPosition !== undefined ? props.gridPosition.row : props.rowIndex,
-  rowSpan: props.gridPosition !== undefined ? props.gridPosition.rowSpan : props.rowSpan,
-  colSpan: props.gridPosition !== undefined ? props.gridPosition.colSpan : props.colSpan
-}))<BoxProps>`
+export const Box = styled(withThemedMotion(motion.div)).attrs<BoxProps>(
+  (props: BoxProps) => ({
+    height: props.fullHeight ? '100%' : props.height,
+    width: props.fullWidth ? '100%' : props.width,
+    colIndex:
+      props.gridPosition !== undefined
+        ? props.gridPosition.column
+        : props.colIndex,
+    rowIndex:
+      props.gridPosition !== undefined
+        ? props.gridPosition.row
+        : props.rowIndex,
+    rowSpan:
+      props.gridPosition !== undefined
+        ? props.gridPosition.rowSpan
+        : props.rowSpan,
+    colSpan:
+      props.gridPosition !== undefined
+        ? props.gridPosition.colSpan
+        : props.colSpan,
+  })
+)<BoxProps>`
   ${space}
   ${color}
   ${display}
@@ -81,5 +101,4 @@ export const Box = styled(withThemedMotion(motion.div)).attrs<BoxProps>((props: 
 
 Box.defaultProps = {
   boxSizing: 'border-box',
-  fontSize: 1
 };

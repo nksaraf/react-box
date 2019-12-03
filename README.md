@@ -1,27 +1,167 @@
-# @nksaraf/react-box
+# TSDX React User Guide
 
-A basic set of primitives led by the <code>Box</code> that integrate https://github.com/styled-system/styled-system (with https://github.com/styled-components/styled-components) and https://github.com/framer/framer-motion to give us a declarative interface for both styling and animation right through the props. Theming can be done as with styled-components (and keys from the theme can be used as values for the css props from styled-system and animation props from framer-motion). We also re-export the <code>useFormik</code> hook from the great https://github.com/jaredpalmer/formik library to make form-handling a breeze.
+Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
-The other primitives are:
-* Button, Input, Image, Text, Span, SVG, Link
-* Flex, Column, Row, Grid, Cell
+> This TSDX setup is meant for developing React components (not apps!) that can be published to NPM. If you’re looking to build an app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
 
-These wrap all the prop magic of Box around other dom element types. You can see the flexibility of this at https://playroom.now.sh which is an integration with https://github.com/nksaraf/playroom to produce a super
-simple yet powerful environment to develop quickly. Here are some examples of the possibilities from within the playroom environment. You can directly go to the link and start playing with the code, nothing else required at all. It has React and all its power built in. Everything is a work in progress right now.
-Docs are on the way.
+> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
 
-## React hooks
-<img src="https://github.com/nksaraf/playroom/raw/master/images/hooks.gif" alt="Hooks in Playroom Demo" title="Hooks in Playroom Demo" />
-[playroom link - hooks](https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABAbUgV2XRgCcAaTVGdAYQgKOIF1MBeTAJRgEMx0A6PJQDK6LkQAUABgCUAbgA6ySGiwBLJcRgBbGIVr0SrTOOmsAfBSr7CJcfhvFzmew0wBqTAEY5ixQB4AITx0dBRnPGJUCGIWeRAABwh1BjjMFAAVLniWYHUwTR09OgcAXzNFTExM+IB6agAbVTAAa0xQzC0IADcYTC4AC24oPn8aoJCUcuRAiAAPTAAzFHQhVQAvGByAJgAWMoBNOj7NPqwMGHjMYBcSEr4-MbmpkBKgA)
+## Commands
 
-## Animation and stlying props with @nksaraf/react-box
-<img src="https://github.com/nksaraf/playroom/raw/master/images/animation.gif" alt="Animations with Framer Motion in Playroom Demo" title="Animations with Framer Motion in Playroom Demo" />
-[playroom link - animation and styling](https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABAbQwQ3RgBpNUZ0BldAmAXUwF5MAlGPMdAOgFcyqaAFAB0QeEQEoA3EOQyAPACEIADxmZMANzwAnAJZ5k6VA2DBMeeJjMAbGADN0lgAyYAviQBGlm-ceYAjE4urm6uaphg3NqoENoMIgAOELqGMNoi4Umouui6KPEg2jDWBLoaMBnI6igAKngJJgLijAB8pOT8hAL4hK2Y3dS9DEwiYiCYAPyYIh4imJajEuJhVebIugC2NCY9MCst4QASxdYQmADqsdZQAITyAPRKygfIIK5AA)
+TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
 
-## Data fetching with useEffect
-<img src="https://github.com/nksaraf/playroom/raw/master/images/effect.gif" alt="Data fetching in Playroom Demo" title="Data fetching in Playroom Demo" />
-[playroom link - Data fetching](https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABAbQA4QGsYBbFAGk1RnQAVCSUBdTAXkwCUYBDMdAOgCuVAMrou6GAAoAOiHQAnGDDAEIsgJQBuackhos2AJbEuAcxgUqteqWQBJE+eZtOPfkJijxU2Ru3JXXkEqAFEAMzDldElJdVYAPkxgHUxMPQxMRVQBABssNkj0MAALSQADYvR0XFR4AHo6-CIuXEM+SDqWwzqANwAmRpsUOoASYCaGZABfMvUU1Mw+dGKYZEkocS4EzA2xPgArVBRYueQFxeXV9c3tqzoiWwczKV2uPlRceUMJVD4w+RQ6AA+rAwlxcuh1Kdzu1xCVJDB5AD5LdqPdJk9zDIQBotDophQ8ENkIw8cgdAAeOzIXACdDzHpcHICGAscbEqbzFAAYWKXGQ5jZjOZMFR1gex2FLPaAiRq3QABUuPJzPwpTB1JzkHV4pTMaLUPIwGzjM8ppgdToQFMgA)
+The recommended workflow is to run TSDX in one terminal:
 
-## Forms with Formik
-<img src="https://github.com/nksaraf/playroom/raw/master/images/forms.gif" alt="Forms in Formik Demo" title="Forms in Formik Demo" />
-[playroom link - Forms using Formik]https://playroom.now.sh/#?code=N4Igxg9gJgpiBc4IDsDOAXABMTA3AhgDYCuMqANJgBb7JSEwDCNyA5jJgL6YC8mxqGADEIAJwC2ASwDWACmAAdZJkyTkk9JKIA1IqVTxsSlSuT5xMQwpABldDAAOVGMmvGu5dyhvEARlPRDWQBKXgA+bE4lTmCAbiUlAB4w90SASWQHYiwCEhgeYFz9ADozC24UZlp2ApZ6JhZ2bjL86xbrTAB6FOVMRIAhCAAPTDBiUVQxHmsHCDV7UQ7IQinrXzzigFYABm3rHpNMAAkYQhXsIrJS8xhOAEJUzsGhnsTupRBOIA
+```
+npm start # or yarn start
+```
+
+This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+
+Then run the example inside another:
+
+```
+cd example
+npm i # or yarn to install dependencies
+npm start # or yarn start
+```
+
+The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, [we use Parcel's aliasing](https://github.com/palmerhq/tsdx/pull/88/files).
+
+To do a one-off build, use `npm run build` or `yarn build`.
+
+To run tests, use `npm test` or `yarn test`.
+
+## Configuration
+
+Code quality is [set up for you](https://github.com/palmerhq/tsdx/pull/45/files) with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
+
+### Jest
+
+Jest tests are set up to run with `npm test` or `yarn test`. This runs the test watcher (Jest) in an interactive mode. By default, runs tests related to files changed since the last commit.
+
+#### Setup Files
+
+This is the folder structure we set up for you:
+
+```
+/example
+  index.html
+  index.tsx       # test your component here in a demo app
+  package.json
+  tsconfig.json
+/src
+  index.tsx       # EDIT THIS
+/test
+  blah.test.tsx   # EDIT THIS
+.gitignore
+package.json
+README.md         # EDIT THIS
+tsconfig.json
+```
+
+#### React Testing Library
+
+We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
+
+### Rollup
+
+TSDX uses [Rollup v1.x](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
+
+### TypeScript
+
+`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
+
+## Continuous Integration
+
+### Travis
+
+_to be completed_
+
+### Circle
+
+_to be completed_
+
+## Optimizations
+
+Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
+
+```js
+// ./types/index.d.ts
+declare var __DEV__: boolean;
+
+// inside your code...
+if (__DEV__) {
+  console.log('foo');
+}
+```
+
+You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+
+## Module Formats
+
+CJS, ESModules, and UMD module formats are supported.
+
+The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+
+## Using the Playground
+
+```
+cd example
+npm i # or yarn to install dependencies
+npm start # or yarn start
+```
+
+The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**!
+
+## Deploying the Playground
+
+The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
+
+```bash
+cd example # if not already in the example folder
+npm run build # builds to dist
+netlify deploy # deploy the dist folder
+```
+
+Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+
+```bash
+netlify init
+# build command: yarn build && cd example && yarn && yarn build
+# directory to deploy: example/dist
+# pick yes for netlify.toml
+```
+
+## Named Exports
+
+Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+
+## Including Styles
+
+There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
+
+For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
+
+## Publishing to NPM
+
+We recommend using https://github.com/sindresorhus/np.
+
+## Usage with Lerna
+
+When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
+
+The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
+
+Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
+
+```diff
+   "alias": {
+-    "react": "../node_modules/react",
+-    "react-dom": "../node_modules/react-dom"
++    "react": "../../../node_modules/react",
++    "react-dom": "../../../node_modules/react-dom"
+   },
+```
+
+An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)

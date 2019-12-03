@@ -14,7 +14,7 @@ export const transform = system({
   overflow: true,
   boxSizing: true,
   cursor: true,
-  textDecoration: true
+  textDecoration: true,
 });
 
 export interface TransformProps {

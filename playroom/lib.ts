@@ -1,2 +1,1 @@
-export { useGet } from "restful-react";
-export * from "../src/index";
+export * from '../src/index';

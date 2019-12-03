@@ -20,20 +20,22 @@ declare interface CustomGridProps {
     columns?: any;
     rows?: any;
 }
-interface CellProps {
-    colIndex?: number | string;
-    rowIndex?: number | string;
-    colSpan?: number;
-    rowSpan?: number;
-    middle?: boolean;
-    fullHeight?: boolean;
-    fullWidth?: boolean;
-}
+
+declare interface CellProps {
+    colIndex?: ResponsiveValue<number | string>;
+    rowIndex?: ResponsiveValue<number | string>;
+    colSpan?: ResponsiveValue<number | string>;
+    rowSpan?: ResponsiveValue<number | string>;
+    middle?: ResponsiveValue<boolean>;
+    fullHeight?: ResponsiveValue<boolean>;
+    fullWidth?: ResponsiveValue<boolean>;
+  }
+  
 declare interface GridPosition {
-    row?: number;
-    column?: number;
-    rowSpan?: number;
-    colSpan?: number;
+row?: ResponsiveValue<number>;
+column?: ResponsiveValue<number>;
+rowSpan?: ResponsiveValue<number>;
+colSpan?: ResponsiveValue<number>;
 }
 
 declare interface BoxProps extends SpaceProps, ColorProps, DisplayProps, BackgroundProps, LayoutProps, FlexboxProps, GridProps, BorderProps, ShadowProps, PositionProps, TransformProps, TypographyProps, CellProps, CustomGridProps, MotionProps, React.RefAttributes<HTMLDivElement> {
